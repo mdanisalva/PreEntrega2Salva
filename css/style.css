@@ -6,3 +6,112 @@
 h1{
     text-align: center;
 }
+
+
+
+.pie{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pie ul{
+    list-style-type: none;
+}
+
+.pie a{
+    text-decoration: none;
+}
+
+
+/* ---------- SECCION 1 ---------- */
+.seccion1-index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 400px);
+    grid-template-areas:
+        "imagen-grande"
+        "img-1"
+        "img-2"
+        "img-3"
+        "img-4"
+    ;
+    max-width: 760px; 
+    margin: auto;
+}
+
+.imagen-grande {
+    grid-area: imagen-grande;
+    background-image: url('../resources/images/gyt.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.img-1 {
+    grid-area: img-1;
+    background-image: url('../resources/images/escudo.png');
+    background-size: cover;
+    color: white;
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image: url('../resources/images/estadio.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image: url('../resources/images/rojas.webp');
+    background-size: cover;
+    color: white;
+
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image: url('../resources/images/jugador.jpeg');
+    background-size: cover;
+    color: white;
+}
+
+
+
+.seccion1-index .imagen-grande img {
+    width: 300px;
+}
+
+.seccion1-index h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.seccion1-index img {
+    height: 175px;
+}
+
+article {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffef;
+}
+
+
+/* Estrategia Responsive = Mobile First = MIN WIDTH*/
+
+@media (min-width: 400px) {
+    .navegacion ul {
+        width: 100vw;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .seccion1-index {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 200px);
+        grid-template-areas:
+            "imagen-grande imagen-grande img-1 img-2"
+            "imagen-grande imagen-grande img-3 img-4";
+    }
+}
