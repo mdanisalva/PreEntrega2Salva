@@ -23,6 +23,11 @@ h1{
 }
 
 
+.paisajes img{
+    max-width: 300px;
+ 
+}
+
 /* ---------- SECCION 1 ---------- */
 .seccion1-index {
     display: grid;
